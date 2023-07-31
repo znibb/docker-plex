@@ -1,0 +1,33 @@
+version: '3.7'
+services:
+  plex:
+    image: plexinc/pms-docker:latest
+    container_name: plex
+    hostname: PlexServer
+    restart: unless-stopped
+    env_file: .env
+    labels:
+      - com.centurylinklabs.watchtower.enable=true
+    init: true
+    network_mode: bridge
+    ports:
+      # Plex Media Server
+        - 32400:32400/tcp
+      # Plex Companion
+        # - 3005:3005/tcp
+      # Roku via Plex companion
+        # - 8324:8324/tcp
+      # Plex DLNA Server
+        # - 32469:32469/tcp
+      # Plex DLNA Server
+        # - 1900:1900/udp
+      # Network discovery
+        # - 32410:32410/udp
+        # - 32412:32412/udp
+        # - 32413:32413/udp
+        # - 32414:32414/udp
+    volumes:
+      - ./config:/config
+      - /mnt/ramdisk:/transcode
+      - /mnt/nas/movies:/data/movies
+      - /mnt/nas/series:/data/series

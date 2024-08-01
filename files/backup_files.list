@@ -1,2 +1,8 @@
 .env
-data/
+"data/plex/Library/Application Support/Plex Media Server/Media/"
+"data/plex/Library/Application Support/Plex Media Server/Metadata/"
+"data/plex/Library/Application Support/Plex Media Server/Plug-ins/"
+"data/plex/Library/Application Support/Plex Media Server/Plug-in Support/"
+"data/plex/Library/Application Support/Plex Media Server/Preferences.xml
+data/tautulli/config.ini
+data/tautulli/tautulli.db

@@ -31,7 +31,7 @@ services:
         # - 32413:32413/udp
         # - 32414:32414/udp
     volumes:
-      - ./config/plex:/config
+      - ./data/plex:/config
       - /mnt/ramdisk:/transcode
       - /mnt/nas/movies:/data/movies
       - /mnt/nas/series:/data/series
@@ -56,7 +56,7 @@ services:
     networks:
       - traefik
     volumes:
-      - ./config/tautulli:/config
+      - ./data/tautulli:/config
 
 networks:
   traefik:
